@@ -1,0 +1,328 @@
+    /* CSS Document */
+
+    body {
+        background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+        background-size: 400% 400%;
+        -webkit-animation: Gradient 15s ease infinite;
+        -moz-animation: Gradient 15s ease infinite;
+        animation: Gradient 15s ease infinite;
+        overflow-x: hidden;
+    }
+
+    @-webkit-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @-moz-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    body.overflow-hidden {
+        background: #2c2c2c;
+    }
+
+    .overflow-hidden {
+        overflow: hidden;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
+    header.add-zindex {
+        z-index: 99;
+    }
+
+    .logo-bg {
+        position: absolute;
+        height: 70px;
+        width: 130px;
+        background: rgba(44, 44, 44, 0.8);
+        /* left: -20px;
+    top: 0px;*/
+        z-index: -1;
+        -webkit-transform: skewX(-30deg);
+        transform: skewX(-30deg);
+        animation-duration: 0.5s;
+        animation-delay: 0.5s;
+        transform: translatex(-200px) translatey(-90px) skewX(-30deg);
+        animation-fill-mode: forwards;
+    }
+
+    .active-logo-bg {
+        animation-name: shine;
+    }
+
+    @keyframes shine {
+        0% {
+            transform: translatex(-200px) translatey(-90px) skewX(-30deg);
+        }
+        100% {
+            transform: translatex(-80px) translatey(-20px) skewX(-30deg);
+        }
+    }
+
+
+    .ibc-menu {
+        width: 35px;
+        height: 30px;
+        margin: 10px 10px;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+    }
+
+    .ibc-menu span {
+        background-color: #fff;
+        position: absolute;
+        border-radius: 2px;
+        transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+        width: 100%;
+        height: 4px;
+        transition-duration: 500ms
+    }
+
+    .ibc-menu span:nth-child(1) {
+        top: 0px;
+        left: 0px;
+    }
+
+    .ibc-menu span:nth-child(2) {
+        top: 13px;
+        left: 0px;
+    }
+
+    .ibc-menu span:nth-child(3) {
+        bottom: 0px;
+        left: 0px;
+    }
+
+    .ibc-menu:not(.clickMenu):hover span:nth-child(1) {
+        transform: rotate(-3deg) scaleY(1.1);
+    }
+
+    .ibc-menu:not(.clickMenu):hover span:nth-child(2) {
+        transform: rotate(3deg) scaleY(1.1);
+    }
+
+    .menuFive:not(.clickMenu):hover span:nth-child(3) {
+        transform: rotate(-4deg) scaleY(1.1);
+    }
+
+    .clickMenu span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 13px;
+    }
+
+    .clickMenu span:nth-child(2) {
+        transform: scale(.1);
+    }
+
+    .clickMenu span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 13px;
+    }
+
+    .nav-menu {
+        position: absolute;
+        /* left: 0px; */
+        right: -9999px;
+        top: 0px;
+        bottom: 0px;
+        overflow-x: hidden;
+        z-index: 11;
+        width: 85%;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .nav-menu.is-visible {
+        right: 0px;
+    }
+
+
+    .navbar-brand {
+        color: #fff;
+    }
+
+    .menu-shape {
+        position: absolute;
+        right: -190px;
+        top: 0px;
+        /*background: #2c2c2c;*/
+        background: rgba(44, 44, 44, 0.8);
+        bottom: 0px;
+        width: 100%;
+        -webkit-transform: skew(-30deg);
+        transform: skew(-30deg);
+    }
+
+    .ibc-menu-social {
+        width: 80%;
+        margin: 100px auto;
+        position: relative;
+        z-index: 111;
+    }
+
+    .ibc-socia-link a {
+        cursor: pointer;
+        margin-left: 5px;
+    }
+
+    .ibc-socia-link a>i {
+        font-size: 25px;
+        color: #adadad;
+    }
+
+    .ibc-mail a {
+        color: #adadad;
+    }
+
+    .banner {
+        background: url(../img/bg2.jpg)no-repeat 0px 0px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        min-height: 800px;
+        /* background: #e6e7e8;*/
+        opacity: 0.8;
+    }
+
+
+
+    .banner-text {
+        padding: 16em 0em 0 0;
+        text-align: center;
+        position: relative;
+    }
+
+    .ibc-banner {
+        position: relative;
+        list-style: none;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        margin: 0 auto;
+    }
+
+    .ibc-banner-info h3 {
+        font-size: 3em;
+        color: #352a1c;
+        letter-spacing: 1px;
+        font-weight: 400;
+        margin-bottom: 5px;
+        text-transform: capitalize;
+        text-align: left;
+        padding-left: 0.1em;
+    }
+
+    .ibc-banner-info p {
+        color: #000;
+        font-size: 16px;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        text-align: left;
+        width: 70%;
+        line-height: 1.8em;
+        margin: 2em 0;
+    }
+
+    .ibc-banner-info h4,
+    .ibc-banner-info h1 {
+        font-size: 3em;
+        font-weight: 600;
+        color: #343534;
+        padding-right: .15em;
+        letter-spacing: 2px;
+    }
+
+    .ibc-banner-info a {
+        display: inline-block;
+        padding: .6em 1.5em;
+        margin-top: 0.5em;
+        font-size: 17px;
+        border: none;
+        color: #000;
+        font-weight: 400;
+        border-radius: 3px;
+        letter-spacing: 1px;
+        background: #ffdc39;
+        text-transform: capitalize;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .ibc-banner-info a:hover {
+        color: #fff;
+        background: #00b6e3;
+    }
+
+    .activeBanner {
+        -webkit-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+        -webkit-animation-name: bannerAnim;
+        animation-name: bannerAnim;
+        animation-fill-mode: forwards;
+    }
+
+
+    @keyframes bannerAnim {
+        0% {
+            margin: 0px 0px 0px 0px;
+        }
+        25% {
+            margin: 10px 0px 0px 0px;
+        }
+        50% {
+            margin: 10px 10px 0px 0px;
+        }
+        75% {
+            margin: 10px 10px 10px 0px;
+        }
+        90% {
+            margin: 10px 10px 10px 10px;
+        }
+        100% {
+            margin: 10px 10px 10px 10px;
+        }
+    }
