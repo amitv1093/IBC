@@ -5,7 +5,7 @@ $(document).ready(function() {
     // console.log(windHeight + " " + windWidth);
 
     $(window).on("resize", function() {
-        $(".banner").css('minHeight', $(window).height());
+        $(".banner,.banner-text").css('minHeight', $(window).height());
         // windHeight = $(window).height();
         // windWidth = $(window).width();
 
@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 
     $(".ibc-menu").click(function(event) {
-        $(this).toggleClass('clickMenu').closest('header').toggleClass('add-zindex');
+        $(this).toggleClass('clickMenu').closest('header');
         $(".banner").toggleClass('activeBanner').promise().done(function() {
             $(".logo-bg").toggleClass('active-logo-bg');
         });
@@ -33,5 +33,62 @@ $(document).ready(function() {
         $("body").toggleClass("overflow-hidden");
         $(".nav-menu").removeClass('is-visible');
     });*/
+
+
+    // Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+
+$(document).mousemove(function(e) {
+    $('#mouse')
+      .eq(0)
+      .css({
+        left: e.pageX,
+        top: e.pageY
+      });
+    setTimeout(function() {
+      $('#mouse')
+        .eq(1)
+        .css({
+          left: e.pageX,
+          top: e.pageY
+        });
+    }, 100);
+  });
 
 });

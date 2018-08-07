@@ -6,38 +6,41 @@
     <title>Untitled Document</title>
     <link href="css/demo.css" rel="stylesheet" type="text/css" />
     <link href="css/style-ama.css" rel="stylesheet" type="text/css" />
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+    <div id="mouse"><div></div></div>
+    <div id="background"></div>
     <section class="banner">
         <header>
             <div class="navbar">
-                <div class="container-fluid"> <a class="navbar-brand" href="index.html">IBC<span class="logo-bg"></span></a>
+                <div class="container-fluid"> <a class="navbar-brand" href="index.html"><!-- <span class="logo-bg"></span> -->
+                    <img src="./img/ibc-logo.svg" title="Ignite Business Catalyst" class="logo"/>
+                </a>
                     <div class="ibc-menu"> <span></span> <span></span> <span></span> </div>
                 </div>
             </div>
         </header>
-        <section class="nav-menu">
-            <div class="menu-shape">
-            </div>
+        <nav class="nav-menu">
+            <!--  <div class="menu-shape">
+            </div> -->
             <nav class="menu menu--ama">
-                <a class="menu__item" href="#">
-            <span class="menu__item-name">Portfolio</span>
+                <a class="menu__item" href="index.html">
+            <span class="menu__item-name">Home</span>
           </a>
-                <a class="menu__item" href="#">
-            <span class="menu__item-name">Clients</span>
+                <a class="menu__item" href="aboutus.html">
+            <span class="menu__item-name">About IBC</span>
           </a>
-                <a class="menu__item" href="#">
-            <span class="menu__item-name">Philosophy</span>
+                <a class="menu__item" href="services.html">
+            <span class="menu__item-name">Services</span>
           </a>
-                <a class="menu__item" href="#">
-            <span class="menu__item-name">Contact</span>
+                <a class="menu__item" href="contactus.html">
+            <span class="menu__item-name">Contact US</span>
           </a>
             </nav>
-            <div class="clearfix"> </div>
             <div class="ibc-menu-social">
                 <div class="ibc-mail pull-left">
                     <a href="#"><h3>info@ibc.com</h3></a>
@@ -49,13 +52,23 @@
                     <a><i class="fa fa-twitter"></i></a>
                 </div>
             </div>
-        </section>
+        </nav>
         <div class="container">
             <div class="banner-text">
                 <div class="ibc-banner">
-                    <div class="ibc-banner-info text-left">
-                        <h1 class="text-left">You need to have collaborative hiring process</h1>
-                        <p>Standard dummy text ever since the 1500.</p>
+                    <div id="dividers">
+                        <div class="divider"></div>
+                        <div class="divider"></div>
+                        <div class="divider"></div>
+                        <div class="divider"></div>
+                        <div class="divider"></div>
+                        <div class="divider"></div>
+                        <div class="divider"></div>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="ibc-banner-info">
+                        <p class="text-left"><span class="ibc-banner-typo">"</span>You need to have collaborative hiring process</p>
+                        
                         <!--  <a href="about.html" class="text-left">Read More</a> -->
                     </div>
                 </div>
@@ -70,5 +83,4 @@
     <script src="js/demo-ama.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
-
 </html>

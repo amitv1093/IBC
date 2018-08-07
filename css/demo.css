@@ -1,39 +1,28 @@
-
 /* Common styles for the menus */
+
 .menu {
-	position: relative;
-    z-index: 10;
-    right: 20em;
-    /* margin: 0px auto; */
+    margin: 0px auto;
     width: 170px;
-    /* right: -40px; */
-    /* margin: 0px auto; */
-    float: right;
-    /* margin-right: 15em; */
-    top: 50%;
-     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
 }
 
 .menu__item {
-	line-height: 1;
-	position: relative;
-	display: block;
-	margin: 1em 0;
-	outline: none;
+    line-height: 1;
+    position: relative;
+    display: block;
+    margin: 1em 0;
+    outline: none;
 }
 
 .menu__item-name,
 .menu__item-label {
-	position: relative;
-	display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .menu__item-name {
-	font-size: 1.25em;
+    font-size: 1.25em;
 }
 
 .menu__item-label {
-	margin: 0 0 0 0.5em;
+    margin: 0 0 0 0.5em;
 }
-
